@@ -1,8 +1,14 @@
 var express = require('express');
 var router = express.Router();
-var User = require('../models/user');
+// var User = require('../models/user');
 
-router.get('/', function (req, res, next) {
+router.get('/', function(req, res, next) {
+	res.render('index');
+});
+
+
+
+/*router.get('/', function (req, res, next) {
 	User.findOne({}, function(err, doc) {
 		if(err) {
 			return res.send('Error!');
@@ -22,7 +28,7 @@ router.post('/', function(req, res, next) {
 	user.save();
 	res.redirect('/');
 });
-
+*/
 /*router.get('/message/:msg', function (req, res, next) {
     res.render('node', {message: req.params.msg});
 });
